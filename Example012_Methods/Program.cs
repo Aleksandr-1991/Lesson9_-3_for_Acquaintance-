@@ -123,3 +123,28 @@ PrintArray(arr);
 SelectionSort(arr);
 PrintArray(arr);
 */
+
+// (Видимость переменных и их изменяемые значения:)
+/*
+int a = 5, b = 8, count = 5;
+int Chlen(int a, int b, int count)
+{
+    for (int i = 0; i < count; i++)
+    {
+        a++;
+        b--;
+        Console.WriteLine($"Внутри цикла, внутри f-ции на {i+1}-ой итерации значение а: {a}");
+        Console.WriteLine($"Внутри цикла, внутри f-ции на {i+1}-ой итерации значение b: {b}");
+        Console.WriteLine();
+    }
+    Console.WriteLine($"Вне цикла, но внутри f-ции а = {a}\tВне цикла всё ещё Видит значения изменённые внутри него!");
+    Console.WriteLine($"Вне цикла, но внутри f-ции b = {b}\tВне цикла всё ещё Видит значения изменённые внутри него!");
+    Console.WriteLine();
+    return a;
+}
+Console.Clear();
+Console.WriteLine("Вне f-ции перед её вызовом значение а: " + a);
+Console.WriteLine("Вне f-ции перед её вызовом значение b: " + b);
+a = Chlen(a, b, count);
+Console.WriteLine($"Вне f-ции, после её вызова значение а: {a}\t(изменилась потому ч мы сделали ''return a;'')");
+Console.Write($"Вне f-ции, после её вызова значение b: {b}\t(за f-цией знач. п-меннных сбрас к значениям до вызова.)");   //*/
